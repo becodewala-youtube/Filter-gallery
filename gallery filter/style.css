@@ -1,0 +1,98 @@
+   /* Basic style for the webpage */
+   body{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+  }
+  *{
+    margin:0;
+    box-sizing: border-box;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  img{
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  /* Style for the gallery section */
+  .gallery{
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-color: #2a2932;
+    padding: 100px 0;
+  }
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+
+  /* Style for the navigation bar */
+  .gallery .gallery-filter{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .gallery .gallery-filter .filter-item{
+    color: #ffffff;
+    font-size: 17px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+    padding: 8px 20px 8px 20px;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+  }
+
+  /* Style for the active button */
+  .gallery .gallery-filter .filter-item.active{
+    background-color: white;
+    color: #2a2932;
+  }
+
+  /* Style for the images */
+  .gallery .gallery-item{
+    padding: 0 15px;
+    width: 25%;
+    margin-bottom: 30px;
+  }
+  .gallery .gallery-item .image{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  .gallery .gallery-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+
+  /* Style for the hover effect */
+  .gallery .gallery-item .image:hover img{
+    transform: scale(1.1);
+  }
+
+  /* Style for the responsiveness */
+  @media (max-width: 992px){
+    .gallery .gallery-item{
+      width: 33.33%;
+    }
+  }
+  @media (max-width: 768px){
+    .gallery .gallery-item{
+      width: 50%;
+    }
+  }
+  @media (max-width: 576px){
+    .gallery .gallery-item{
+      width: 100%;
+    }
+  }
